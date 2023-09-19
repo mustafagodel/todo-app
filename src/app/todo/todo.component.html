@@ -1,0 +1,64 @@
+
+<body>
+    <head></head>
+<div class=" contanier1 container">
+    <div class="row" >
+        <div class="col-5 mx-auto p-4" >
+         <h3 class="board text-white p-2 ">
+                TodoList
+            </h3>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control"
+                  [(ngModel)]="inputText"
+                  (keyup.enter)="addItem();">
+                <button
+                [class]="getBtnClasses()"
+                class="btn1 btn"
+                (click)="addItem();">Add</button>
+              </div>
+<div class=" form-check mb-3">
+    <input type="checkbox" [(ngModel)]="displayAll" class =" form-check-input" name="" id="displayAll">
+    <label for="displayAll" class=" form-check-label">Show All</label>
+</div>   
+
+<div class="display">
+    {{displayCount()}} Tasks Completed.
+</div>
+<div class="alert alert-warning" *ngIf="getItems().length == 0 else itemsTable">
+    All Tasks Completed.
+</div>
+<ng-template #itemsTable>
+<table class="table table-bordered input1">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Description</th>
+                    <th>Action</th>
+            </tr>
+            </thead>
+<tbody>
+    <tr *ngFor="let item of getItems(); let i=index;">
+<td>{{i+1}}</td>
+<td>{{item.description}}</td>
+<td>
+    <div [ngSwitch]="item.action">
+        <div *ngSwitchCase="true">Yes</div>
+        <div *ngSwitchDefault>No</div>
+    </div>
+</td>
+<td>
+    <input type="checkbox" (change)="onActionChanged(item)"    [(ngModel)]="item.action" name="" id="">
+</td>
+    </tr>
+</tbody> 
+</table>
+</ng-template>          
+</div>
+    </div>
+</div>
+
+
+<script>
+   
+</script>
+</body>

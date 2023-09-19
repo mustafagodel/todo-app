@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body{
+    background:linear-gradient(90deg ,#ec2c2c,#d29e62,#e9993d );
+    font-family: Poppins, sans-serif;
+    background-size: 100% 100%; 
+}
+
+.board{
+     background:linear-gradient(90deg ,#ec2c2c,#d29e62,#e9993d );
+    font-family: Poppins, sans-serif
+;
+box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.7);
+    background-size: 100% 100%; 
+}
+.btn1{
+    background:linear-gradient(90deg ,#ec2c2c,#d29e62,#e9993d );
+   font-family: Poppins, sans-serif;
+box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.7);
+   background-size: 100% 100%; 
+   color: white;
+   border-color: white;
+}
+
+.input1{
+    
+box-shadow: 10px 10px 10px rgba(0.2, 0.2, 0.2, 0.7);
+
+}
